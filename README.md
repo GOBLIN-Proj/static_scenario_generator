@@ -1,4 +1,4 @@
-# 🐏 Static Scenario Generator, for the generation of non randomised scenarios for GOBLIN
+# 💻 Static Scenario Generator, for the generation of non randomised scenarios for GOBLIN
 
  Based on the [GOBLIN](https://gmd.copernicus.org/articles/15/2239/2022/) (**G**eneral **O**verview for a **B**ackcasting approach of **L**ivestock **IN**tensification) Scenario module
 
@@ -136,7 +136,7 @@ def main():
     scenario_class = ScenarioGeneration()
     
     #pass the configuration file and return a pandas dataframe. 
-    
+
     print(scenario_class.generate_scenario_dataframe("./data/config.json"))
 
 if __name__ == "__main__":
