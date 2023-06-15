@@ -14,7 +14,6 @@ class ScenarioGeneration:
             config = json.load(config_file)
 
         columns = self.data_manager_class.scenario_columns
-        #columns = list(config[0].keys())
 
         scenario_df = pd.DataFrame(config, columns=columns)
 
