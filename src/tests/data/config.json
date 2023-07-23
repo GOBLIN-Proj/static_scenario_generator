@@ -21,6 +21,8 @@
     "Lowland sheep pop": 0,
     "Dairy Pasture fertilisation": 150,
     "Beef Pasture fertilisation": 110,
+    "Urea proportion": 0.2,
+    "Urea abated proportion": 0,
     "Afforest year": 2080   
 },
 {
@@ -46,6 +48,8 @@
     "Lowland sheep pop": 0,
     "Dairy Pasture fertilisation": 150,
     "Beef Pasture fertilisation": 110,
+    "Urea proportion": 0.2,
+    "Urea abated proportion": 0,
     "Afforest year": 2080   
 },
 {
@@ -71,6 +75,8 @@
     "Lowland sheep pop": 0,
     "Dairy Pasture fertilisation": 150,
     "Beef Pasture fertilisation": 110,
+    "Urea proportion": 0.2,
+    "Urea abated proportion": 0,
     "Afforest year": 2080   
 },
 {
@@ -96,6 +102,8 @@
     "Lowland sheep pop": 509000,
     "Dairy Pasture fertilisation": 150,
     "Beef Pasture fertilisation": 110,
+    "Urea proportion": 0.2,
+    "Urea abated proportion": 0,
     "Afforest year": 2080   
 },
 {
@@ -121,6 +129,8 @@
     "Lowland sheep pop": 0,
     "Dairy Pasture fertilisation": 150,
     "Beef Pasture fertilisation": 110,
+    "Urea proportion": 0.2,
+    "Urea abated proportion": 0,
     "Afforest year": 2080   
 },
 {
@@ -146,6 +156,8 @@
     "Lowland sheep pop": 0,
     "Dairy Pasture fertilisation": 150,
     "Beef Pasture fertilisation": 110,
+    "Urea proportion": 0.2,
+    "Urea abated proportion": 0,
     "Afforest year": 2080   
 },
 {
@@ -171,6 +183,8 @@
     "Lowland sheep pop": 0,
     "Dairy Pasture fertilisation": 150,
     "Beef Pasture fertilisation": 110,
+    "Urea proportion": 0.2,
+    "Urea abated proportion": 0,
     "Afforest year": 2080   
 },
 {
@@ -196,6 +210,8 @@
     "Lowland sheep pop": 509000,
     "Dairy Pasture fertilisation": 150,
     "Beef Pasture fertilisation": 110,
+    "Urea proportion": 0.2,
+    "Urea abated proportion": 0,
     "Afforest year": 2080   
 }
 

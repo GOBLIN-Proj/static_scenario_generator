@@ -23,5 +23,7 @@ class DataManager:
                                         "Upland sheep pop", 
                                         "Lowland sheep pop", 
                                         "Dairy Pasture fertilisation", 
-                                        "Beef Pasture fertilisation", 
+                                        "Beef Pasture fertilisation",
+                                        "Urea proportion",
+                                        "Urea abated proportion",
                                         "Afforest year"]
