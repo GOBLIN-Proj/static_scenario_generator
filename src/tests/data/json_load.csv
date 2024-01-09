@@ -1,0 +1,9 @@
+,Scenarios,Dairy pop,Beef pop,Upland sheep pop,Lowland sheep pop,Dairy prod,Beef prod,Upland sheep prod,Lowland sheep prod,Dairy Pasture fertilisation,Beef Pasture fertilisation,Clover fertilisation,Clover proportion,Dairy GUE,Beef GUE,Urea proportion,Urea abated proportion,Crop area,Wetland area,Forest area,Conifer proportion,Broadleaf proportion,Conifer harvest,Broadleaf harvest,Conifer thinned,Cattle systems
+0,0,1060000,0,0,0,0,0,0,0,150,110,0,0.5,0,0,0.2,0,0,0,1,0.7,0.3,0.05,0,0.1,Dairy
+1,0,0,1000,0,0,0,0,0,0,150,110,0,0.5,0,0,0.2,0,0,0,1,0.7,0.3,0.05,0,0.1,Beef
+2,0,0,0,3000,0,0,0,0,0,150,110,0,0.5,0,0,0.2,0,0,0,1,0.7,0.3,0.05,0,0.1,Upland sheep
+3,0,0,0,0,50000,0,0,0,0,150,110,0,0.5,0,0,0.2,0,0,0,1,0.7,0.3,0.05,0,0.1,Lowland sheep
+4,1,1060000,0,0,0,0,0,0,0,150,110,0,0.5,0,0,0.2,0,0,0,1,0.7,0.3,0.05,0,0.8,Dairy
+5,1,0,1000,0,0,0,0,0,0,150,110,0,0.5,0,0,0.2,0,0,0,1,0.7,0.3,0.05,0,0.8,Beef
+6,1,0,0,0,0,0,0,0,0,150,110,0,0.5,0,0,0.2,0,0,0,1,0.7,0.3,0.05,0,0.8,Upland sheep
+7,1,0,0,0,0,0,0,0,0,150,110,0,0.5,0,0,0.2,0,0,0,1,0.7,0.3,0.05,0,0.8,Lowland sheep
