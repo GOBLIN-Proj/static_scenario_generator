@@ -15,11 +15,12 @@ systems:
       - Upland sheep prod: Upland sheep prod
 
   - Lowland sheep:
-      - Manure managment: Manure management sheep
+      - Manure management: Manure management sheep
       - Lowland sheep pop: Lowland sheep pop
       - Lowland sheep prod: Lowland sheep prod
 
 animal_columns:
+  - Manure management
   - Dairy pop
   - Beef pop
   - Upland sheep pop
@@ -39,6 +40,7 @@ common_columns:
   - Beef prod
   - Upland sheep prod
   - Lowland sheep prod
+  - Manure management
   - Dairy Pasture fertilisation
   - Beef Pasture fertilisation
   - Clover fertilisation
@@ -55,6 +57,7 @@ common_columns:
   - Conifer harvest
   - Broadleaf harvest
   - Conifer thinned
+  - Afforest year
 
 
 
