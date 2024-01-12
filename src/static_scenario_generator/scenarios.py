@@ -60,7 +60,10 @@ class ScenarioGeneration:
                 rows.append(row)
 
         # Concatenate all rows into a DataFrame
-        scenario_df = pd.concat([scenario_df, pd.DataFrame(rows)], ignore_index=True)
+        if scenario_df.empty:
+            scenario_df = pd.DataFrame(rows)
+        else:
+            scenario_df = pd.concat([scenario_df, pd.DataFrame(rows)], ignore_index=True)
 
         return scenario_df
 
@@ -101,6 +104,9 @@ class ScenarioGeneration:
                 rows.append(row)
 
         # Concatenate all rows into a DataFrame
-        scenario_df = pd.concat([scenario_df, pd.DataFrame(rows)], ignore_index=True)
+        if scenario_df.empty:
+            scenario_df = pd.DataFrame(rows)
+        else:
+            scenario_df = pd.concat([scenario_df, pd.DataFrame(rows)], ignore_index=True)
 
         return scenario_df
