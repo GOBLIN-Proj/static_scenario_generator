@@ -31,7 +31,7 @@
 {
     "Scenarios": 1,
     "Manure management cattle": "tank liquid",
-    "Manure management sheep": "tank solid",
+    "Manure management sheep": "solid",
     "Dairy pop": 1060000,
     "Beef pop":1000,
     "Upland sheep pop": 0,
