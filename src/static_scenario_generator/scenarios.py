@@ -14,10 +14,14 @@ class ScenarioGeneration:
     def generate_scenario_dataframe(self, path):
 
         if path.endswith(".json"):
-            config = self.json_load(path)
+            print("JSON file detected")
+            config =self.json_load(path)
 
         elif path.endswith(".csv"):
-            config = self.csv_load(path)
+            print("CSV file detected")
+            config= self.csv_load(path)
+
+        return config
 
 
     def json_load(self, path):

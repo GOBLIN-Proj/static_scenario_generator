@@ -14,5 +14,7 @@ def main():
 
     scenario_class.csv_load(os.path.join(path,csv_file)).to_csv(os.path.join(path,"csv_load.csv"))
 
+    print(scenario_class.generate_scenario_dataframe(os.path.join(path,json_file)))
+
 if __name__ == "__main__":
     main()
