@@ -1,0 +1,24 @@
+:py:mod:`geo_static_scenario_generator`
+=======================================
+
+.. py:module:: geo_static_scenario_generator
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   config/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   geo_scenarios/index.rst
+
+

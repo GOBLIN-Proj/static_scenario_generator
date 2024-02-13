@@ -1,37 +1,41 @@
 """
-===========================
-Scenario Generation Module
-===========================
+====================================
+Geo (Catchement) Scenario Generator
+====================================
 A module for generating scenario dataframes from configuration files.
 
 This module supports loading scenarios from JSON or CSV files, processing
 them into pandas DataFrames based on predefined common and animal-specific
 columns and systems. It leverages the DataManager for accessing data schemas
-and configurations.
+and the CatchmentDataAPI for catchment-specific information.
 
 """
+
 from resource_manager.data_manager import DataManager
+from catchment_data_api.catchment_data_api import CatchmentDataAPI
 import pandas as pd
 import json
 
 
 class ScenarioGeneration:
     """
-    A class to generate scenario dataframes from configuration files.
+    A class for generating scenario dataframes from configuration files.
 
-    This class supports loading and processing scenarios from either JSON or CSV files,
-    transforming them into pandas DataFrames according to predefined column schemas
-    and system configurations. It utilizes the DataManager class to access these schemas
-    and configurations.
+    This class supports loading scenarios from JSON or CSV files, processing
+    them into pandas DataFrames based on predefined common and animal-specific
+    columns and systems. It leverages the DataManager for accessing data schemas
+    and the CatchmentDataAPI for catchment-specific information.
 
     Attributes:
-        data_manager_class (DataManager): An instance of DataManager.
-        common_columns (list): A list of common column names used across scenarios.
-        animal_columns (list): A list of columns specific to animal data.
-        animal_systems (list): A list of predefined animal systems.
+        data_manager_class (DataManager): Instance of DataManager with catchment data.
+        catchment_api (CatchmentDataAPI): Instance of CatchmentDataAPI for catchment data processing.
+        common_columns (list): List of common column names.
+        animal_columns (list): List of animal-specific column names.
+        animal_systems (list): List of animal systems.
     """
     def __init__(self):
-        self.data_manager_class = DataManager()
+        self.data_manager_class = DataManager(catchment=True)
+        self.catchment_api = CatchmentDataAPI()
         self.common_columns = self.data_manager_class.get_common_columns()
         self.animal_columns = self.data_manager_class.get_animal_columns()
         self.animal_systems = self.data_manager_class.get_systems()
@@ -41,15 +45,15 @@ class ScenarioGeneration:
         """
         Generates a DataFrame from a scenario configuration file.
 
-        This method detects the file format (JSON or CSV) based on the file extension
-        and processes the file accordingly to create a DataFrame filled with scenario data.
+        The method detects the file type (JSON or CSV) and processes it
+        accordingly to create a DataFrame with scenarios based on the
+        configurations provided.
 
         Parameters:
-            path (str): The file path to the scenario configuration file (either JSON or CSV).
+            path (str): Path to the configuration file (JSON or CSV).
 
         Returns:
-            pandas.DataFrame: A DataFrame containing the scenario data extracted and processed
-                              from the configuration file.
+            pandas.DataFrame: DataFrame containing the processed scenario data.
         """
         if path.endswith(".json"):
             print("JSON file detected")
@@ -67,11 +71,10 @@ class ScenarioGeneration:
         Loads and processes a scenario configuration from a JSON file.
 
         Parameters:
-            path (str): The file path to the JSON configuration file.
+            path (str): Path to the JSON configuration file.
 
         Returns:
-            pandas.DataFrame: A DataFrame containing the processed scenario data from the JSON file,
-                              structured according to the predefined common and animal-specific columns.
+            pandas.DataFrame: DataFrame containing the processed scenario data from the JSON file.
         """
         with open(path) as config_file:
             config = json.load(config_file)
@@ -103,7 +106,10 @@ class ScenarioGeneration:
 
                 for key in self.common_columns:
                     if key not in self.animal_columns:
-                        row[key] = sc.get(key, None)
+                        if key == "Catchment":
+                            row[key] = self.catchment_api.format_catchment_name(sc.get("Catchment", None))
+                        else:
+                            row[key] = sc.get(key, None)
 
                 rows.append(row)
 
@@ -121,11 +127,10 @@ class ScenarioGeneration:
         Loads and processes a scenario configuration from a CSV file.
 
         Parameters:
-            path (str): The file path to the CSV configuration file.
+            path (str): Path to the CSV configuration file.
 
         Returns:
-            pandas.DataFrame: A DataFrame containing the processed scenario data from the CSV file,
-                              structured according to the predefined common and animal-specific columns.
+            pandas.DataFrame: DataFrame containing the processed scenario data from the CSV file.
         """
         # Read data from CSV file
         config = pd.read_csv(path)
@@ -157,7 +162,10 @@ class ScenarioGeneration:
                         
                 for key in self.common_columns:
                     if key not in self.animal_columns:
-                        row[key] = sc[key] if pd.notnull(sc[key]) else 0
+                        if key == "Catchment":
+                            row[key] = self.catchment_api.format_catchment_name(sc.get("Catchment", None))
+                        else:
+                            row[key] = sc[key] if pd.notnull(sc[key]) else 0
                         
                 rows.append(row)
 

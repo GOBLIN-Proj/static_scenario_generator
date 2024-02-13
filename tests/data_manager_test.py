@@ -1,4 +1,4 @@
-from static_scenario_generator.data_manager import DataManager
+from resource_manager.data_manager import DataManager
 
 def main():
     dm = DataManager()

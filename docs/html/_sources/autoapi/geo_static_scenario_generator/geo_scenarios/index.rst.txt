@@ -1,0 +1,110 @@
+:py:mod:`geo_static_scenario_generator.geo_scenarios`
+=====================================================
+
+.. py:module:: geo_static_scenario_generator.geo_scenarios
+
+.. autoapi-nested-parse::
+
+   ====================================
+   Geo (Catchement) Scenario Generator
+   ====================================
+   A module for generating scenario dataframes from configuration files.
+
+   This module supports loading scenarios from JSON or CSV files, processing
+   them into pandas DataFrames based on predefined common and animal-specific
+   columns and systems. It leverages the DataManager for accessing data schemas
+   and the CatchmentDataAPI for catchment-specific information.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   geo_static_scenario_generator.geo_scenarios.ScenarioGeneration
+
+
+
+
+.. py:class:: ScenarioGeneration
+
+
+   A class for generating scenario dataframes from configuration files.
+
+   This class supports loading scenarios from JSON or CSV files, processing
+   them into pandas DataFrames based on predefined common and animal-specific
+   columns and systems. It leverages the DataManager for accessing data schemas
+   and the CatchmentDataAPI for catchment-specific information.
+
+   .. attribute:: data_manager_class
+
+      Instance of DataManager with catchment data.
+
+      :type: DataManager
+
+   .. attribute:: catchment_api
+
+      Instance of CatchmentDataAPI for catchment data processing.
+
+      :type: CatchmentDataAPI
+
+   .. attribute:: common_columns
+
+      List of common column names.
+
+      :type: list
+
+   .. attribute:: animal_columns
+
+      List of animal-specific column names.
+
+      :type: list
+
+   .. attribute:: animal_systems
+
+      List of animal systems.
+
+      :type: list
+
+   .. py:method:: generate_scenario_dataframe(path)
+
+      Generates a DataFrame from a scenario configuration file.
+
+      The method detects the file type (JSON or CSV) and processes it
+      accordingly to create a DataFrame with scenarios based on the
+      configurations provided.
+
+      :param path: Path to the configuration file (JSON or CSV).
+      :type path: str
+
+      :returns: DataFrame containing the processed scenario data.
+      :rtype: pandas.DataFrame
+
+
+   .. py:method:: json_load(path)
+
+      Loads and processes a scenario configuration from a JSON file.
+
+      :param path: Path to the JSON configuration file.
+      :type path: str
+
+      :returns: DataFrame containing the processed scenario data from the JSON file.
+      :rtype: pandas.DataFrame
+
+
+   .. py:method:: csv_load(path)
+
+      Loads and processes a scenario configuration from a CSV file.
+
+      :param path: Path to the CSV configuration file.
+      :type path: str
+
+      :returns: DataFrame containing the processed scenario data from the CSV file.
+      :rtype: pandas.DataFrame
+
+
+

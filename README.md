@@ -1,12 +1,33 @@
 # 💻 Static Scenario Generator (v1.0.0), for the generation of non randomised scenarios for GOBLIN 
+[![license](https://img.shields.io/badge/License-GPL%203.0-red)](https://github.com/colmduff/static_scenario_generator/blob/0.1.0/LICENSE)
+[![python](https://img.shields.io/badge/python-3.9-blue?logo=python&logoColor=white)](https://github.com/colmduff/static_scenario_generator)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
  Based on the [GOBLIN](https://gmd.copernicus.org/articles/15/2239/2022/) (**G**eneral **O**verview for a **B**ackcasting approach of **L**ivestock **IN**tensification) Scenario module
 
- The package is simple. It defines the columns for scenario inputs. A user provided json file is used to generate rows for each scenario and each corresponding livestock system. Each scenario requires 4 rows for each of the livestock systems.  
+ The package is simple. It defines the columns for scenario inputs. A user provided json or csv file is used to generate rows for each scenario and each corresponding livestock system.
 
  Currently parameterised for Ireland, but the database can be updated with additional emissions factor contexts, which are selected able with an emissions factor key. 
 
- Final result is a pandas dataframe of sceanrio inputs that can be read by numerous GOBLIN packages.
+ Final result is a pandas dataframe of scenario inputs that can be read by numerous GOBLIN packages.
+
+ The library contains sub-modules for the generation of scenarios for the national and sub-national (catchment level)
+
+The package is structured as: 
+
+  ```
+    src/
+    │
+    ├── geo_static_scenario_generator/
+    │   └── ... (other modules and sub-packages)
+    │
+    ├── static_scenario_generator/
+    |   └── ... (other modules and sub-packages)
+
+ ```
+ 
+The ```geo_static_scenario_generator``` modules are used for catchment level analysis, while the ```static_scenario_generator``` modules are used for national 
+level analysis. 
 
 ## Installation
 
