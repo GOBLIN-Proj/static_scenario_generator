@@ -1,4 +1,4 @@
-# 💻 Static Scenario Generator (v1.0.0), for the generation of non randomised scenarios for GOBLIN 
+# 💻 Static Scenario Generator for the generation of non randomised scenarios for GOBLIN 
 [![license](https://img.shields.io/badge/License-GPL%203.0-red)](https://github.com/colmduff/static_scenario_generator/blob/0.1.0/LICENSE)
 [![python](https://img.shields.io/badge/python-3.9-blue?logo=python&logoColor=white)](https://github.com/colmduff/static_scenario_generator)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
