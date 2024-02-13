@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💻 Static Scenario Generator (v1.0.0), for the generation of non randomised scenarios for GOBLIN &mdash; Static Scenario Generator 1.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=fc837d61"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="autoapi/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Static Scenario Generator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Static Scenario Generation Example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Static Scenario Generator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">💻 Static Scenario Generator (v1.0.0), for the generation of non randomised scenarios for GOBLIN</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="static-scenario-generator-v1-0-0-for-the-generation-of-non-randomised-scenarios-for-goblin">
+<h1>💻 Static Scenario Generator (v1.0.0), for the generation of non randomised scenarios for GOBLIN<a class="headerlink" href="#static-scenario-generator-v1-0-0-for-the-generation-of-non-randomised-scenarios-for-goblin" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="https://github.com/colmduff/static_scenario_generator/blob/0.1.0/LICENSE"><img alt="license" src="https://img.shields.io/badge/License-GPL%203.0-red" /></a>
+<a class="reference external" href="https://github.com/colmduff/static_scenario_generator"><img alt="python" src="https://img.shields.io/badge/python-3.9-blue?logo=python&amp;logoColor=white" /></a>
+<a class="reference external" href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a></p>
+<p>Based on the <a class="reference external" href="https://gmd.copernicus.org/articles/15/2239/2022/">GOBLIN</a> (<strong>G</strong>eneral <strong>O</strong>verview for a <strong>B</strong>ackcasting approach of <strong>L</strong>ivestock <strong>IN</strong>tensification) Scenario module</p>
+<p>The package is simple. It defines the columns for scenario inputs. A user provided json or csv file is used to generate rows for each scenario and each corresponding livestock system.</p>
+<p>Currently parameterised for Ireland, but the database can be updated with additional emissions factor contexts, which are selected able with an emissions factor key.</p>
+<p>Final result is a pandas dataframe of scenario inputs that can be read by numerous GOBLIN packages.</p>
+<p>The library contains sub-modules for the generation of scenarios for the national and sub-national (catchment level)</p>
+<p>The package is structured as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  src/
+  │
+  ├── geo_static_scenario_generator/
+  │   └── ... (other modules and sub-packages)
+  │
+  ├── static_scenario_generator/
+  |   └── ... (other modules and sub-packages)
+
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">geo_static_scenario_generator</span></code> modules are used for catchment level analysis, while the <code class="docutils literal notranslate"><span class="pre">static_scenario_generator</span></code> modules are used for national
+level analysis.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>Install from git hub.</p>
+<p>When prompted enter your <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> and password, which is your <code class="docutils literal notranslate"><span class="pre">&lt;access_token&gt;</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;access_token&gt;</span></code> is provided by the repo manager.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> pass your own github username.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;static_scenario_generator@git+https://github.com/colmduff/static_scenario_generator.git@main&quot;</span><span class="w"> </span>
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>Firstly, the config.json file should look like the following. The example shows two scenarios.</p>
+<p>To add additional scenarios, simply repeat the inputs given here, update the values, including the sceanrio numbers.</p>
+<p>In the previous version (v0.1.0) each scenario took 4 rows, 1 for each livestock system. However, this was cumbersome to deal with, and has now been refactored so that the input data does not require repition. The module will still create the 4 rows in the final dataframe for each entry. But the user only needs a single block to achieve this.</p>
+<p>In addition, the module has been updated to allow the user to use csv files for data input. Each row in the csv file corresponds to a scenario with the same keys as columns. The ordering of the keys does not matter.</p>
+<p>Finally, additional variables related to clover (clover proportion &amp; clover fertilisation) and grass use efficiency (Dairy GUE and Beef GUE) have been added.</p>
+<p>This addition makes the module incompatible with GOBLIN lite v0.1.0.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span>
+    <span class="s2">&quot;Scenarios&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Manure management cattle&quot;</span><span class="p">:</span> <span class="s2">&quot;tank liquid&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Manure management sheep&quot;</span><span class="p">:</span> <span class="s2">&quot;tank solid&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Dairy pop&quot;</span><span class="p">:</span> <span class="mi">1060000</span><span class="p">,</span>
+    <span class="s2">&quot;Beef pop&quot;</span><span class="p">:</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="s2">&quot;Upland sheep pop&quot;</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
+    <span class="s2">&quot;Lowland sheep pop&quot;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span>
+    <span class="s2">&quot;Dairy prod&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Beef prod&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Lowland sheep prod&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Upland sheep prod&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Forest area&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;Conifer proportion&quot;</span><span class="p">:</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="s2">&quot;Broadleaf proportion&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span>
+    <span class="s2">&quot;Conifer harvest&quot;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>
+    <span class="s2">&quot;Conifer thinned&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="s2">&quot;Broadleaf harvest&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Crop area&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Wetland area&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Dairy GUE&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Beef GUE&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Dairy Pasture fertilisation&quot;</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+    <span class="s2">&quot;Beef Pasture fertilisation&quot;</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span>
+    <span class="s2">&quot;Clover proportion&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="s2">&quot;Clover fertilisation&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Urea proportion&quot;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span>
+    <span class="s2">&quot;Urea abated proportion&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Afforest year&quot;</span><span class="p">:</span> <span class="mi">2080</span>   
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="s2">&quot;Scenarios&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;Manure management cattle&quot;</span><span class="p">:</span> <span class="s2">&quot;tank liquid&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Manure management sheep&quot;</span><span class="p">:</span> <span class="s2">&quot;tank solid&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Dairy pop&quot;</span><span class="p">:</span> <span class="mi">1060000</span><span class="p">,</span>
+    <span class="s2">&quot;Beef pop&quot;</span><span class="p">:</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="s2">&quot;Upland sheep pop&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Lowland sheep pop&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Dairy prod&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Beef prod&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Lowland sheep prod&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Upland sheep prod&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Forest area&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;Conifer proportion&quot;</span><span class="p">:</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="s2">&quot;Broadleaf proportion&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span>
+    <span class="s2">&quot;Conifer harvest&quot;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>
+    <span class="s2">&quot;Conifer thinned&quot;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
+    <span class="s2">&quot;Broadleaf harvest&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Crop area&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Wetland area&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Dairy GUE&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Beef GUE&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Dairy Pasture fertilisation&quot;</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+    <span class="s2">&quot;Beef Pasture fertilisation&quot;</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span>
+    <span class="s2">&quot;Clover proportion&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="s2">&quot;Clover fertilisation&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Urea proportion&quot;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span>
+    <span class="s2">&quot;Urea abated proportion&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;Afforest year&quot;</span><span class="p">:</span> <span class="mi">2080</span>  
+<span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>To generate the dataframe, follow the example below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">static_scenario_generator.scenarios</span> <span class="kn">import</span> <span class="n">ScenarioGeneration</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1">#instantiate the class </span>
+    <span class="n">scenario_class</span> <span class="o">=</span> <span class="n">ScenarioGeneration</span><span class="p">()</span>
+    
+    <span class="c1">#pass the configuration file and return a pandas dataframe. </span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">scenario_class</span><span class="o">.</span><span class="n">generate_scenario_dataframe</span><span class="p">(</span><span class="s2">&quot;./data/config.json&quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+    
+</pre></div>
+</div>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading"></a></h2>
+<p>This project is licensed under the terms of the MIT license.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="autoapi/index.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Colm Duffy.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

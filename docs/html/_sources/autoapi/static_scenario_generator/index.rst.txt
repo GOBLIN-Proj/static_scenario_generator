@@ -1,0 +1,24 @@
+:py:mod:`static_scenario_generator`
+===================================
+
+.. py:module:: static_scenario_generator
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   config/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   scenarios/index.rst
+
+

@@ -1,0 +1,106 @@
+:py:mod:`resource_manager.data_manager`
+=======================================
+
+.. py:module:: resource_manager.data_manager
+
+.. autoapi-nested-parse::
+
+   =============
+   Data Manager
+   =============
+   A class to manage data configuration for scenario generation.
+   This class handles loading of configuration data from YAML files, providing access to common column names, animal systems,
+   and animal-specific column names based on the selected scenario context (national or catchment).
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   resource_manager.data_manager.DataManager
+
+
+
+
+.. py:class:: DataManager(catchment=False)
+
+
+   A class to manage data configuration for scenario generation.
+
+   This class handles loading of configuration data from YAML files, providing access
+   to common column names, animal systems, and animal-specific column names based on
+   the selected scenario context (national or catchment).
+
+   .. attribute:: common_columns
+
+      Dictionary of common column names.
+
+      :type: dict
+
+   .. attribute:: animal_systems
+
+      Dictionary of animal systems configurations.
+
+      :type: dict
+
+   .. attribute:: animal_columns
+
+      Dictionary of animal-specific column names.
+
+      :type: dict
+
+   .. py:method:: get_config_data(config_file)
+
+      Load and return the configuration data from the specified YAML file.
+
+      :param config_file: The path to the configuration file.
+      :type config_file: str
+
+      :returns: The configuration data loaded from the YAML file.
+      :rtype: dict
+
+
+   .. py:method:: get_common_columns()
+
+      Returns the list of common column names from the configuration.
+
+      :returns: A list of common column names.
+      :rtype: list
+
+
+   .. py:method:: get_animal_columns()
+
+      Returns the list of animal-specific column names from the configuration.
+
+      :returns: A list of animal-specific column names.
+      :rtype: list
+
+
+   .. py:method:: get_systems()
+
+      Returns the list of animal systems from the configuration.
+
+      :returns: A list of animal systems.
+      :rtype: list
+
+
+   .. py:method:: get_system(system_name)
+
+      Retrieves the configuration data for a specific animal system.
+
+      :param system_name: The name of the animal system.
+      :type system_name: str
+
+      :returns:
+
+                The configuration data for the specified animal system, or an
+                      empty dictionary if the system name is not found.
+      :rtype: dict
+
+
+
