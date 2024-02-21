@@ -11,7 +11,7 @@ and animal-specific column names based on the selected scenario context (nationa
 import os
 import yaml
 from static_scenario_generator.config import get_local_dir as national_get_local_dir
-from geo_static_scenario_generator.config import get_local_dir as catchemnt_get_local_dir
+from static_scenario_generator.geo_static_scenario_generator.config import get_local_dir as catchemnt_get_local_dir
 
 
 class DataManager:

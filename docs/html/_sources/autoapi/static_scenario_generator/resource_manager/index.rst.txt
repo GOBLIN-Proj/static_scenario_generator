@@ -1,0 +1,15 @@
+:py:mod:`static_scenario_generator.resource_manager`
+====================================================
+
+.. py:module:: static_scenario_generator.resource_manager
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   data_manager/index.rst
+
+

@@ -6,8 +6,6 @@ This page contains auto-generated API reference documentation [#f1]_.
 .. toctree::
    :titlesonly:
 
-   /autoapi/geo_static_scenario_generator/index
-   /autoapi/resource_manager/index
    /autoapi/static_scenario_generator/index
 
 .. [#f1] Created with `sphinx-autoapi <https://github.com/readthedocs/sphinx-autoapi>`_
