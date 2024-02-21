@@ -1,7 +1,7 @@
-:py:mod:`geo_static_scenario_generator.geo_scenarios`
-=====================================================
+:py:mod:`static_scenario_generator.geo_static_scenario_generator.geo_scenarios`
+===============================================================================
 
-.. py:module:: geo_static_scenario_generator.geo_scenarios
+.. py:module:: static_scenario_generator.geo_static_scenario_generator.geo_scenarios
 
 .. autoapi-nested-parse::
 
@@ -25,7 +25,7 @@ Classes
 
 .. autoapisummary::
 
-   geo_static_scenario_generator.geo_scenarios.ScenarioGeneration
+   static_scenario_generator.geo_static_scenario_generator.geo_scenarios.ScenarioGeneration
 
 
 

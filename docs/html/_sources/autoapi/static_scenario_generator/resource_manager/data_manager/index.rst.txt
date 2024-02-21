@@ -1,7 +1,7 @@
-:py:mod:`resource_manager.data_manager`
-=======================================
+:py:mod:`static_scenario_generator.resource_manager.data_manager`
+=================================================================
 
-.. py:module:: resource_manager.data_manager
+.. py:module:: static_scenario_generator.resource_manager.data_manager
 
 .. autoapi-nested-parse::
 
@@ -22,7 +22,7 @@ Classes
 
 .. autoapisummary::
 
-   resource_manager.data_manager.DataManager
+   static_scenario_generator.resource_manager.data_manager.DataManager
 
 
 

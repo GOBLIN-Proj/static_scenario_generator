@@ -11,6 +11,8 @@ Subpackages
    :maxdepth: 3
 
    config/index.rst
+   geo_static_scenario_generator/index.rst
+   resource_manager/index.rst
 
 
 Submodules
