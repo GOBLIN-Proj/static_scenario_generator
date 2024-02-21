@@ -11,7 +11,7 @@ and the CatchmentDataAPI for catchment-specific information.
 
 """
 
-from resource_manager.data_manager import DataManager
+from static_scenario_generator.resource_manager.data_manager import DataManager
 from catchment_data_api.catchment_data_api import CatchmentDataAPI
 import pandas as pd
 import json

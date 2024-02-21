@@ -1,4 +1,4 @@
-from geo_static_scenario_generator.geo_scenarios import ScenarioGeneration
+from static_scenario_generator.geo_static_scenario_generator.geo_scenarios import ScenarioGeneration
 import os 
 
 def main():

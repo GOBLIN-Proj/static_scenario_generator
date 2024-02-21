@@ -18,11 +18,11 @@ The package is structured as:
   ```
     src/
     │
-    ├── geo_static_scenario_generator/
-    │   └── ... (other modules and sub-packages)
-    │
     ├── static_scenario_generator/
-    |   └── ... (other modules and sub-packages)
+        └── ... (other modules and sub-packages)
+        │
+        ├── geo_static_scenario_generator/
+        └── ... (other modules and sub-packages)
 
  ```
  

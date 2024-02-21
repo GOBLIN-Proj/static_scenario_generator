@@ -10,7 +10,7 @@ columns and systems. It leverages the DataManager for accessing data schemas
 and configurations.
 
 """
-from resource_manager.data_manager import DataManager
+from static_scenario_generator.resource_manager.data_manager import DataManager
 import pandas as pd
 import json
 
