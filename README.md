@@ -1,6 +1,6 @@
 # 💻 Static Scenario Generator for the generation of non randomised scenarios for GOBLIN 
-[![license](https://img.shields.io/badge/License-GPL%203.0-red)](https://github.com/colmduff/static_scenario_generator/blob/0.1.0/LICENSE)
-[![python](https://img.shields.io/badge/python-3.9-blue?logo=python&logoColor=white)](https://github.com/colmduff/static_scenario_generator)
+[![license](https://img.shields.io/badge/License-MIT%203.0-red)](https://github.com/GOBLIN-Proj/static_scenario_generator/blob/0.1.0/LICENSE)
+[![python](https://img.shields.io/badge/python-3.9-blue?logo=python&logoColor=white)](https://github.com/GOBLIN-Proj/static_scenario_generator)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
  Based on the [GOBLIN](https://gmd.copernicus.org/articles/15/2239/2022/) (**G**eneral **O**verview for a **B**ackcasting approach of **L**ivestock **IN**tensification) Scenario module
@@ -41,7 +41,7 @@ When prompted enter your ```<username>``` and password, which is your ```<access
 
 
 ```bash
-pip install "static_scenario_generator@git+https://github.com/colmduff/static_scenario_generator.git@main" 
+pip install "static_scenario_generator@git+https://github.com/GOBLIN-Proj/static_scenario_generator.git@main" 
 
 ```
 
