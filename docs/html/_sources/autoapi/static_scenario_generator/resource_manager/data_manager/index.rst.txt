@@ -103,4 +103,16 @@ Classes
       :rtype: dict
 
 
+   .. py:method:: check_crop_area(key, sc)
+
+      Check if the crop area scenario input is set to 0.
+
+      :param key: The key being checked.
+      :type key: str
+      :param sc: The scenario data dictionary.
+      :type sc: dict
+
+      :raises ValueError: If the crop area scenario input is not set to 0.
+
+
 

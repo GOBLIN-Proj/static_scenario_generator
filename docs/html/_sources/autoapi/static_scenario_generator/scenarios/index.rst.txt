@@ -64,6 +64,8 @@ Classes
 
       :type: list
 
+   .. note:: The Crop area variable for scenarios is currently under development, if not set to 0, it will raise an error.
+
    .. py:method:: generate_scenario_dataframe(path)
 
       Generates a DataFrame from a scenario configuration file.

@@ -29,6 +29,9 @@ class ScenarioGeneration:
         common_columns (list): A list of common column names used across scenarios.
         animal_columns (list): A list of columns specific to animal data.
         animal_systems (list): A list of predefined animal systems.
+
+    Note:
+        The Crop area variable for scenarios is currently under development, if not set to 0, it will raise an error.
     """
     def __init__(self):
         self.data_manager_class = DataManager()
@@ -103,6 +106,7 @@ class ScenarioGeneration:
 
                 for key in self.common_columns:
                     if key not in self.animal_columns:
+                        self.data_manager_class.check_crop_area(key, sc)
                         row[key] = sc.get(key, None)
 
                 rows.append(row)
@@ -157,6 +161,7 @@ class ScenarioGeneration:
                         
                 for key in self.common_columns:
                     if key not in self.animal_columns:
+                        self.data_manager_class.check_crop_area(key, sc)
                         row[key] = sc[key] if pd.notnull(sc[key]) else 0
                         
                 rows.append(row)
