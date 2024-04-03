@@ -99,6 +99,20 @@ class DataManager:
         return {}  # Return an empty dictionary if the system name is not found
 
 
-    
+    def check_crop_area(self, key, sc):
+        """
+        Check if the crop area scenario input is set to 0.
+
+        Args:
+            key (str): The key being checked.
+            sc (dict): The scenario data dictionary.
+
+        Raises:
+            ValueError: If the crop area scenario input is not set to 0.
+        """
+        if key == "Crop area":
+            if sc.get(key, None) !=0:
+                raise ValueError("Crop area scenario input is under development and should be set to 0.")
+                
 
 
