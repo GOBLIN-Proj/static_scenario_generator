@@ -33,13 +33,6 @@ level analysis.
 
 Install from git hub. 
 
-When prompted enter your ```<username>``` and password, which is your ```<access_token>```.
-
-```<access_token>``` is provided by the repo manager.
-
-```<username>``` pass your own github username.
-
-
 ```bash
 pip install "static_scenario_generator@git+https://github.com/GOBLIN-Proj/static_scenario_generator.git@main" 
 
