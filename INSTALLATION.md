@@ -19,7 +19,6 @@ Install with pip
 You can install the package using pip:
 
 ```bash
-
     pip install static_scenario_generator
 ```
 
