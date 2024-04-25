@@ -38,6 +38,13 @@ pip install "static_scenario_generator@git+https://github.com/GOBLIN-Proj/static
 
 ```
 
+Install from PyPI
+
+```bash
+    pip install static_scenario_generator
+```
+
+
 ## Usage
 Firstly, the config.json file should look like the following. The example shows two scenarios. 
 
